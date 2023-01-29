@@ -2,11 +2,13 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    overflow: hidden;
 }
 .container{
     width: 100vw;
     height: 100vh;
     border: 1px solid green;
+    
 }
 .div1{
     width: 100%;
@@ -18,10 +20,40 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    
+
 }
+/* .div1:hover{
+    animation: mine 1s ease;
+    animation-fill-mode: forwards;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    margin-top:40px ;
+} */
 .nav{
     z-index: 1;
     position: absolute;
     right: 15px;
     top: 10px;
+    font-size: 20px;
+    color: chocolate;
 }
+.div2{
+    width: fit-content;
+    height: fit-content;
+    border: 1px solid yellow;
+}
+@keyframes mine {
+    100% {
+      transform-style: preserve-3d;
+      perspective: 1000px;
+      box-shadow: 10px 0px 5px white;
+      /* transform: rotateY(-50deg); */
+      margin-left: -500px;
+    }
+  }
