@@ -1,32 +1,38 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    overflow: hidden;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  overflow: hidden;
 }
-.container{
+body{
     width: 100vw;
-    height: 100vh;
-    border: 1px solid green;
-    
+    height: auto;
 }
-.div1{
-    width: 100%;
-    height: 100%;
-    border: 1px solid red;
-    z-index: 0;
-    position: absolute;
-    background: url(./bg1.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    perspective: 1000px;
-    transform-style: preserve-3d;
-    
+.container {
+  width: 100vw;
+  height: 100vh;
+  border: 1px solid green;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  position: relative;
 
+}
+.div1 {
+  width: 100%;
+  height: 100%;
+  border: 1px solid rgb(49, 41, 23);
+  z-index: 0;
+  position: absolute;
+  background: url(./bg1.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  flex-direction: column;
 }
 /* .div1:hover{
     animation: mine 1s ease;
@@ -35,25 +41,60 @@
     transform-style: preserve-3d;
     margin-top:40px ;
 } */
-.nav{
-    z-index: 1;
-    position: absolute;
-    right: 15px;
-    top: 10px;
-    font-size: 20px;
-    color: chocolate;
+.nav {
+  z-index: 1;
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  font-size: 20px;
+  color: chocolate;
 }
-.div2{
-    width: fit-content;
-    height: fit-content;
-    border: 1px solid yellow;
+.div2 {
+  width: fit-content;
+  height: fit-content;
+  border: 1px solid yellow;
 }
 @keyframes mine {
-    100% {
-      transform-style: preserve-3d;
-      perspective: 1000px;
-      box-shadow: 10px 0px 5px white;
-      /* transform: rotateY(-50deg); */
-      margin-left: -500px;
-    }
+  100% {
+    box-shadow: 10px 0px 5px white;
+    /* transform: rotateY(-50deg); */
+    margin-left: -20px;
+    width: 60%;
+    height: 60%;
+    margin-top: 17vh;
   }
+}
+.side{
+    border: 1px solid yellow;
+    width: 40%;
+    position: absolute;
+    right: 10px;
+    height: 100%;
+    margin-bottom: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.join{
+    width: 90%;
+    height: 70%;
+    border: 1px solid purple;
+    position: relative;
+}
+img{
+    width: 20%;
+    aspect-ratio: 3/2;
+    object-fit: contain;
+    mix-blend-mode: color-burn;
+    position: absolute;
+    right: 42%;
+    top: 5px;
+    display: block;
+    
+}
+form{
+    position: absolute;
+    top: 70px;
+    margin: 0 25%;
+}
