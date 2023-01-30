@@ -13,3 +13,18 @@ nav.addEventListener("click",function () {
 
 
 })
+
+let btn = document.querySelector("button")
+console.log(btn);
+function checkPass() {
+    let password = document.getElementById("pass").value
+    let confirm = document.getElementById("repeat").value
+    if(password !== confirm){
+        alert("Pass word do not match")
+    }
+    else{
+        alert("Password Match")
+        console.log(password);
+    }
+}
+btn.addEventListener("click",checkPass())
